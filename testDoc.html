@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Shadow Example</title>
+    <style>
+        #boxWithShadow {
+            width: 100px;
+            height: 100px;
+            background-color: #f0f0f0;
+            /* Initial styling without box shadow */
+        }
+    </style>
+</head>
+<body>
+
+<div id="boxWithShadow"></div>
+<button onclick="applyBoxShadow()">Apply Box Shadow</button>
+
+<script>
+    function applyBoxShadow() {
+        // Get the element by its id
+        var boxElement = document.getElementById('boxWithShadow');
+
+        // Apply the box shadow styling
+        boxElement.style.boxShadow = '-17.5px -0.5px 32px -6.5px #1c1c1c';
+    }
+</script>
+
+</body>
+</html>
