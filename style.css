@@ -6,7 +6,7 @@ html{
 
 body {
   scroll-behavior: smooth;
-  background-image: url('/images/siora-photography-B1Sn_ADEohs-unsplash.jpg');
+  background-image: url('siora-photography-B1Sn_ADEohs-unsplash.jpg');
   background-repeat: no-repeat;
   background-size: cover; /* Scale the background image to cover the entire background */
   background-position: center; /* Center the background image */
@@ -121,7 +121,7 @@ body {
     overflow: scroll;
     overflow-x: hidden;
     z-index: 0;
-    transition: 0.3s;
+    transition: 0.5s;
 
 }
 
@@ -176,7 +176,7 @@ body {
   font-size: 700%;
   text-decoration: none;
   height: 200px;
-  width: 40%;
+  width: 50%;
   object-fit: cover;
 }
 #titleContainer{
@@ -341,6 +341,11 @@ body {
       padding: 20px;
       width: auto;
       height: auto;
+    }
+  }
+  @media only screen and (max-width: 1980px){
+    .title{
+      font-size: 500%;
     }
   }
   @media only screen and (max-width: 500px) {

@@ -191,7 +191,7 @@ html {
     overflow: scroll;
     overflow-x: hidden;
     z-index: 0;
-    transition: 0.3s;
+    transition: 0.5s;
   }
   
   .jobDetails {
@@ -201,7 +201,7 @@ html {
     margin-right: 10px;
   }
   
-  .productImg {
+  .jobImg {
     width: 200px;
     margin: 20px;
   
@@ -218,7 +218,7 @@ html {
     padding: 10px;
     transition: 0.2s;
   }
-  .addtocart:hover{
+  .applyNow:hover{
     background-color: rgb(39, 94, 39);
   }
   .card {
