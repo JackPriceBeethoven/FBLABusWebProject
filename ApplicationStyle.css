@@ -1,0 +1,490 @@
+html {
+    scroll-behavior: smooth;
+  
+  }
+
+  body {
+    /* Styling applied to entire body, includes background image*/
+    scroll-behavior: smooth;
+    background-image: url('simona-sergi-2a_WytcAUBg-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; /* Scale the background image to cover the entire background */
+    background-position: center; /* Center the background image */
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: left;
+    align-items: top;
+    height: 100vh;
+    overflow-y: hidden;
+  }
+  
+  
+  .sidenav {
+    /* Styling for side navigation bar that connects to the rest of the website*/
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #111111d2;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  .sidenav a {
+    padding: 40px 8px 8px 40px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #c7c7c7;
+    display: block;
+    transition: 0.3s;
+  }
+  .sidenav p {
+    position: absolute;
+    z-index: 1;
+    bottom: 10%;
+    left: 16px;  
+    transition: 0.5s;
+    padding-top: 60px;
+    color: #ececec;
+  }
+  #text {
+    width: auto;
+    margin-right: 0%;
+    transition: 0.5s;
+  
+  }
+  
+  #closeButton {
+    position: absolute;
+    color: #ececec;
+    text-decoration: none;
+    border-style: hidden;
+    padding: 10px;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 2;
+    display: none;
+    font-size: 60px;
+  
+  }
+  
+  #closeButton:hover {
+    color: rgb(197, 49, 49);
+    transition: 0.3s;
+  
+  }
+  
+  
+  .sidenav a:hover {
+    color: #ffffff;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 70px;
+    font-size: 56px;
+    margin-right: 50px;
+    margin: auto;
+    transition: 0.3s;
+  
+  }
+  
+  .open-btn {
+    color: #ececec;
+    border-style: hidden;
+    border-radius: 18px;
+    opacity: 0.8;
+    padding: 20px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 1;
+  }
+  
+  #upArrow {
+    color: #ececec;
+  
+    z-index: 1;
+  }
+  
+  .text {
+    margin: auto;
+    position: absolute;
+    top: 35%;
+    left: 0;
+    right: 0;
+    text-align: center;
+  
+  }
+  
+  .title {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #bdbdbd;
+    background-color: #111111d2;
+    text-transform: uppercase;
+    font-size: 700%;
+    text-decoration: none;
+    height: 200px;
+    width: 75%;
+    object-fit: cover;
+  }
+  
+  #titleContainer {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .arrow-button {
+    color: #ececec;
+    border-style: hidden;
+    border-radius: 18px;
+    opacity: 0.8;
+    padding: 10px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    transition: 0.5s;
+    text-decoration: none;
+    z-index: 3;
+  }
+  
+  .arrow-button:hover {
+    background-color: #3a3a3aac;
+    text-decoration: none;
+  }
+  
+  .clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .row {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding-left: 100px;
+    padding-right: 100px;
+  
+  }
+
+  .Application-box {
+    /* Styling for the application box which contains the fields that the user must fill out */
+    width: 60%;
+    max-width: 600px; 
+    height: 851px;
+    padding: 40px; 
+    overflow-y: auto;
+    background: #ffffff;
+    margin-left: 7%;
+    border-radius: 14px;
+    opacity: 1;
+    background:linear-gradient(to bottom, #e2a76fad 20%, #9b6b3ebe 40%, #724922c5 60%, #502e0ef3 80%, #1d0f01f3 100%);
+    transition: 0.5s;
+    overflow-x: hidden;
+  }
+
+  h1.app-header {
+    font-size: 65px;
+    align-self: center;
+    justify-self: center;
+  }
+
+  h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+  
+  h3 {
+    font-size: 25px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  label {
+    display: block;
+    margin-top: 10px;
+  }
+  
+  input,
+  select {
+    /* Styling for the dropdowns in the form*/
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    width: 100%;
+    background: linear-gradient(to right, #f3e6d3 20%, #f5daba 40%, #f1cfa8 60%, #f1c795 80%, #f3c38d 100%)
+  }
+
+  #resultBox {
+    /* Styling for the box that appears after submitting answers*/
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  input, text {
+    width: 100%;
+    background: linear-gradient(to right, #f3e6d3 20%, #f5daba 40%, #f1cfa8 60%, #f1c795 80%, #f3c38d 100%)
+  }
+
+  button {
+    /* Styling for the buttons on the application*/
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    font-weight: 500;
+    border-radius: 3px;
+    padding: 0 16px;
+    border-radius: 4px;
+    color: #fff;
+    background: #5f3c08;
+    line-height: 1.15;
+    font-size: 14px;
+    height: 36px;
+    word-spacing: 0px;
+    letter-spacing: .1;
+    text-decoration: none;
+    text-transform: uppercase;
+    min-width: 32px;
+    border: none;
+    text-align: center;
+    box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%);
+    transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  button:hover {
+    background: #573604;
+    box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%), 0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%);
+  }
+  ::-webkit-scrollbar {
+    /*Styling for the application form's scrollbar*/
+    width: 12px;
+  }
+  ::-webkit-scrollbar-track {
+    background: linear-gradient(to bottom, #d49f50c2 20%, rgba(179, 127, 50, 0.827) 40%, #aa7526d7 60%, #9e6817d3 80%, #8d5809be 100%)
+  }
+  ::-webkit-scrollbar-thumb {
+    background:linear-gradient(to bottom, #553c17f5 40%, rgba(73, 49, 11, 0.973) 70%, #2b1a01f8 100%);
+    border-radius: 6px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #201300;
+  }
+  @media screen and (max-width: 2000px) {
+        .responsive {
+      width: 100%;
+    }
+    .title{
+      font-size: 30px;
+      padding: 10px;
+      width: auto;
+      height: auto;
+    }
+    #titleContainer{
+      width: auto;
+      height: auto;
+    }
+    #title{
+      font-size: 60px;
+    }
+    .image-container img {
+      width: 85%;
+    }
+    .overlay{
+      width: 10px;
+    }
+    h1.app-header {
+      font-size: 40px;
+      align-self: center;
+      justify-self: center;
+    }
+    h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    
+    h3 {
+      font-size:20px;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+    .Application-box {
+height: 90%;
+    }
+    .Application-box::-webkit-scrollbar {
+      display: none;
+    }
+    .Application-box {
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+    }
+  }
+  @media screen and (max-width: 1400px) {
+    .title{
+      padding: 50px;
+    font-size: 10px;    
+    width: 900px;
+  }
+  .overlay{
+    font-size: 15px;
+  }
+  }
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 18px;
+    }
+    .image-container img {
+      width: 85%;
+    }
+
+}
+@media only screen and (max-width: 700px) {
+    .responsive {
+      flex: 1 0 48%;
+
+    }
+  }
+  @media only screen and (max-width: 900px) {
+    .title{
+      font-size: 100%;
+    }
+  }
+  @media only screen and (max-width: 1024px) {
+    .title{
+      font-size: 50px;
+      padding: 20px;
+      width: auto;
+      height: auto;
+    }
+  }
+  @media only screen and (max-width: 1980px){
+    .title{
+      font-size: 500%;
+    }
+  }
+  @media only screen and (max-width: 500px) {
+    .responsive {
+      width: 100%;
+    }
+    .title{
+      font-size: 30px;
+      padding: 10px;
+      width: auto;
+      height: auto;
+    }
+    #titleContainer{
+      width: auto;
+      height: auto;
+    }
+    #title{
+      font-size: 60px;
+    }
+    .image-container img {
+      width: 85%;
+    }
+    .overlay{
+      width: 10px;
+    }
+    h1.app-header {
+      font-size: 40px;
+      align-self: center;
+      justify-self: center;
+    }
+    h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    
+    h3 {
+      font-size:20px;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+    .Application-box {
+      width: 100%;
+      margin-left: 0%;
+
+    }
+    .Application-box::-webkit-scrollbar {
+      display: none;
+    }
+    .Application-box {
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+    }
+  }
+  
+  @media screen and (max-width: 800px) {
+    .column {
+      -ms-flex: 50%;
+      flex: 50%;
+      max-width: 40%;
+    }
+    .overlay {
+      opacity: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 100%;
+      width: 60%;
+      height: auto;
+    }
+    
+    img{
+      width: 250px;
+      height: 150px;
+      margin-top: -10px;
+      margin-bottom: -10px;
+      
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .column {
+      -ms-flex: 100%;
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
+

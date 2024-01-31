@@ -37,6 +37,16 @@ html{
       color: #c7c7c7;
       display: block;
       transition: 0.3s;
+
+  }
+  .sidenav p {
+    position: absolute;
+    z-index: 1;
+    bottom: 10%;
+    left: 16px;  
+    transition: 0.5s;
+    padding-top: 60px;
+    color: #ececec;
   }
   #text{
       width: auto;
@@ -69,6 +79,7 @@ html{
   
   .sidenav a:hover {
       color: #ffffff;
+      text-decoration: underline;
   }
   
   .sidenav .closebtn {

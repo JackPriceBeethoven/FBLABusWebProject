@@ -11,9 +11,7 @@ function openNav() {
     document.getElementById("closeButton").style.display = "flex";
     document.getElementById("upArrow").style.opacity = "0";
 
-    // Iterate through the collection and do something with each element
     for (var i = 0; i < navImages.length; i++) {
-        // For example, you can add a border to each element
         navImages[i].style.boxShadow = 'box-shadow: -22.5px 1px 32px -3.5px #000000;';
     }
 
@@ -39,7 +37,6 @@ function closeNav() {
     }
 
 }
-// Add smooth scrolling to all links
 // Add smooth scrolling to all links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 anchor.addEventListener('click', function (e) {

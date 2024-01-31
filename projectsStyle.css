@@ -74,6 +74,8 @@ body {
 
 .sidenav a:hover {
   color: #ffffff;
+  text-decoration: underline;
+
 }
 
 .sidenav .closebtn {
@@ -192,6 +194,8 @@ body {
   overflow-x: hidden;
   z-index: 0;
   transition: 0.5s;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
 .productDetails {
@@ -205,6 +209,15 @@ body {
   width: 200px;
   margin: 20px;
 
+}
+.sidenav p {
+  position: absolute;
+  z-index: 1;
+  bottom: 10%;
+  left: 16px;  
+  transition: 0.5s;
+  padding-top: 60px;
+  color: #ececec;
 }
 .addtocart {
   cursor: pointer;
@@ -233,6 +246,43 @@ body {
   padding: 10px;
   background-color: #111111d2;
 }
+.checked {
+  color: orange;
+}
+@media screen and (max-width: 1400px) {
+  .card {
+    flex: 1 0 48%;
+  }
+}
+  @media screen and (max-width: 1400px) {
+    .responsive {
+      flex: 1 0 48%;
+    }
+  
+    .column {
+      -ms-flex: 50%;
+      flex: 50%;
+      max-width: 100%;
+    }
+    
+  }
+  @media screen and (max-width: 2000px) {
+    .card {
+      flex: 1 0 48%;
+    }
+  }
+    @media screen and (max-width: 2000px) {
+      .responsive {
+        flex: 1 0 48%;
+      }
+    
+      .column {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 100%;
+      }
+      
+    }
 @media screen and (max-width: 480px) {
   .card {
     width: 100%;

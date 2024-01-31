@@ -192,6 +192,8 @@ html {
     overflow-x: hidden;
     z-index: 0;
     transition: 0.5s;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
   }
   
   .jobDetails {
@@ -206,6 +208,15 @@ html {
     margin: 20px;
   
   }
+  .sidenav p {
+    position: absolute;
+    z-index: 1;
+    bottom: 10%;
+    left: 16px;  
+    transition: 0.5s;
+    padding-top: 60px;
+    color: #ececec;
+  }
   .applyNow{
     cursor: pointer;
     border-style: solid;
@@ -217,6 +228,8 @@ html {
     margin-bottom: 200px;
     padding: 10px;
     transition: 0.2s;
+    color: #ececec;
+
   }
   .applyNow:hover{
     background-color: rgb(39, 94, 39);
@@ -232,6 +245,40 @@ html {
     margin: 10px;
     padding: 10px;
     background-color: #111111d2;
+  }
+  @media screen and (max-width: 2000px) {
+    .card {
+      flex: 1 0 48%;
+    }
+  }
+    @media screen and (max-width: 2000px) {
+      .responsive {
+        flex: 1 0 48%;
+      }
+    
+      .column {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 100%;
+      }
+      
+    }
+@media screen and (max-width: 1400px) {
+  .card {
+    flex: 1 0 48%;
+  }
+}
+  @media screen and (max-width: 1400px) {
+    .responsive {
+      flex: 1 0 48%;
+    }
+  
+    .column {
+      -ms-flex: 50%;
+      flex: 50%;
+      max-width: 100%;
+    }
+    
   }
   @media screen and (max-width: 480px) {
     .card {
@@ -339,4 +386,3 @@ html {
       max-width: 100%;
     }
   }
-  
