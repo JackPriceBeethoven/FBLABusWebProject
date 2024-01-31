@@ -455,6 +455,18 @@ height: 90%;
     }
   }
   
+  #high-school-details {
+    display: none;
+  }
+
+  #graduate-details {
+    display: none;
+  }
+
+  #undergraduate-details {
+    display: none;
+  }
+
   @media screen and (max-width: 800px) {
     .column {
       -ms-flex: 50%;

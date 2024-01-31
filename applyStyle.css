@@ -229,7 +229,7 @@ html {
     padding: 10px;
     transition: 0.2s;
     color: #ececec;
-
+    text-decoration: none;
   }
   .applyNow:hover{
     background-color: rgb(39, 94, 39);

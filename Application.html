@@ -39,9 +39,9 @@
 
     <label for="worked-before">Have you worked here before?</label>
     <select id="worked-before" name="worked-before">
-        <option value="-----">-----</option>
-        <option value="yes">Yes</option>
-        <option value="no">No</option>
+        <option>-----</option>
+        <option>Yes</option>
+        <option>No</option>
     </select>
 
     <label for="phone-number">Primary Phone Number:</label>
@@ -116,8 +116,8 @@
     <label for="legal-to-work">Legally able to work in the U.S.?</label>
     <select id="legal-to-work" name="legal-to-work">
         <option>-----</option>
-      <option value="yes">Yes</option>
-      <option value="no">No</option>
+      <optio>Yes</option>
+      <option>No</option>
     </select>
 
     <h2>Education</h2>
@@ -131,7 +131,7 @@
   </select>
 
   <!-- High School Details -->
-  <div id="high-school-details" style="display: none;">
+  <div id="high-school-details">
     <label for="school-attended">School Attended:</label>
     <input type="text" id="school-attended" name="school-attended" placeholder="Enter the name of the high school">
     <label for="high-school-city">City:</label>
@@ -205,7 +205,7 @@
   </div>
 
   <!-- Undergraduate School Details -->
-  <div id="undergraduate-details" style="display: none;">
+  <div id="undergraduate-details">
     <label for="school-type">Type of School:</label>
     <select id="school-type" name="school-type">
         <option>-----</option>
@@ -280,10 +280,10 @@
     <label for="degree-type">Degree Type:</label>
     <select id="degree-type" name="degree-type">
       <option value="-----">-----</option>
-    <option value="as">AS</option>
-    <option value="aas">AAS</option>
-    <option value="bs">BS</option>
-    <option value="ba">BA</option>
+    <option>AS</option>
+    <option>AAS</option>
+    <option>BS</option>
+    <option>BA</option>
     </select>
 
     <label for="subject">Subject:</label>
@@ -294,7 +294,7 @@
   </div>
 
   <!-- Graduate School Details -->
-  <div id="graduate-details" style="display: none;">
+  <div id="graduate-details">
     <label for="grad-school-name">Name of School:</label>
     <input type="text" id="grad-school-name" name="grad-school-name" placeholder="Enter the name of the graduate school">
 
@@ -392,8 +392,8 @@
       <label for="contact-employer-1">May we contact this employer?</label>
       <select id="contact-employer-1" name="contact-employer-1">
         <option>-----</option>
-      <option value="yes">Yes</option>
-      <option value="no">No</option>
+      <option>Yes</option>
+      <option>No</option>
       </select>
     
     <h3>Work Experience 2</h3>
@@ -413,8 +413,8 @@
       <label for="contact-employer-2">May we contact this employer?</label>
       <select id="contact-employer-2" name="contact-employer-2">
         <option>-----</option>
-      <option value="yes">Yes</option>
-      <option value="no">No</option>
+      <option>Yes</option>
+      <option>No</option>
       </select>
     
     <h3>Work Experience 3</h3>
@@ -434,8 +434,8 @@
       <label for="contact-employer-3">May we contact this employer?</label>
       <select id="contact-employer-3" name="contact-employer-3">
         <option>-----</option>
-      <option value="yes">Yes</option>
-      <option value="no">No</option>
+      <option>Yes</option>
+      <option>No</option>
       </select>
       
 
@@ -475,81 +475,6 @@
 
       <script src="main.js"></script>
       <script src="projects.js"></script>
-      <script>
-        document.getElementById('education-level').addEventListener('change', function() {
-          var highSchoolDetails = document.getElementById('high-school-details');
-          var undergraduateDetails = document.getElementById('undergraduate-details');
-          var graduateDetails = document.getElementById('graduate-details');
-      
-          highSchoolDetails.style.display = 'none';
-          undergraduateDetails.style.display = 'none';
-          graduateDetails.style.display = 'none';
-      
-          var selectedOption = this.value;
-          if (selectedOption === 'high-school') {
-            highSchoolDetails.style.display = 'block';
-          } else if (selectedOption === 'undergraduate') {
-            undergraduateDetails.style.display = 'block';
-          } else if (selectedOption === 'graduate') {
-            graduateDetails.style.display = 'block';
-          }
-        });
-// Buttons adding additional skill input texts
-  function addAdditionalField(containerId, inputName, placeholderText) {
-  var container = document.getElementById(containerId);
-  var existingButtons = container.querySelectorAll('.add-button');
-  
-  // Remove existing "+" buttons
-  existingButtons.forEach(function(button) {
-    button.remove();
-  });
-
-  // Add a new input field and "+" button with the specified placeholder text
-  var newField = document.createElement('div');
-  newField.innerHTML = `
-    <input type="text" class="additional-input" name="${inputName}${container.children.length + 1}" placeholder="${placeholderText}">
-    <button type="button" class="add-button">+
-  `;
-  container.appendChild(newField);
-}
-
-// Add more skills and licenses/certifications
-  document.getElementById('additional-skills-container').addEventListener('click', function (event) {
-  if (event.target.classList.contains('add-button')) {
-    addAdditionalField('additional-skills-container', 'additional-skills-', 'Add another skill');
-  }
-});
-
-  document.getElementById('additional-licenses-container').addEventListener('click', function (event) {
-  if (event.target.classList.contains('add-button')) {
-    addAdditionalField('additional-licenses-container', 'additional-licenses-', 'Add another license or certification');
-  }
-});
-
-  // Submit:
-  document.addEventListener('DOMContentLoaded', function () {
-    var applicationBox = document.querySelector('.Application-box');
-    var resultBox = document.getElementById('resultBox');
-    var submitButton = document.getElementById('submitButton');
-    var printButton = document.getElementById('printButton');
-
-    // Unhide Results
-    function showResultBox() {
-      applicationBox.style.display = 'none';
-      resultBox.style.display = 'block';
-    }
-
-    // Confirmation
-    function submitApplication() {
-      var isConfirmed = confirm("Are you sure you want to submit your application?");
-      if (isConfirmed) {
-        showResultBox();
-      }
-    }
-
-    // Interactivity
-    submitButton.addEventListener('click', submitApplication);
-    });
-      </script>
+      <script src="app.js"></script>
 </body>
 </html>
