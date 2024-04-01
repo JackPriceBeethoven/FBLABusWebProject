@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Review</title>
+    <style>
+        body { font-family: sans-serif; }
+        label { display: block; margin-bottom: 5px; }
+    </style>
+</head>
+<body>
+    <div id="application-container">
+        <h1>Application Details</h1>
+        </div>    
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const applicationId = urlParams.get('applicationId');
+
+        if (applicationId) {
+            const applicationData = JSON.parse(localStorage.getItem('application_' + applicationId));
+
+            if (applicationData) {
+                const applicationContainer = document.getElementById('application-container');
+
+                // Display each piece of data
+                for (const key in applicationData) {
+                    const label = document.createElement('label');
+                    label.textContent = key + ': ';
+
+                    const valueDisplay = document.createElement('span');
+                    valueDisplay.textContent = applicationData[key];
+
+                    label.appendChild(valueDisplay);
+                    applicationContainer.appendChild(label);
+                }
+            } else {
+                document.getElementById('application-container').innerHTML = "<p>Application not found.</p>";
+            }
+        } else {
+            document.getElementById('application-container').innerHTML = "<p>Invalid application ID.</p>";
+        }
+    </script>
+</body>
+</html>
