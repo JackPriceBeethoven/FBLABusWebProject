@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function () {
         var emailParams = {
             to_email: 'thelonelycat555@gmail.com',
             from_name: document.getElementById('first-name').value + ' ' + document.getElementById('last-name').value,
-            message: 'A new application has been submitted. Please review it here: <a href="127.0.0.1:5500/review.html?applicationId=' + applicationId + '">Review Application</a>'         };
+            message: 'A new application has been submitted. Please review it here: <a href="https://jackpricebeethoven.github.io/FBLABusWebProject/review.html?applicationId=' + applicationId + '">Review Application</a>'         };
 
         // Send the email
         emailjs.send('service_yo892lb', 'template_xa438gi', emailParams)
