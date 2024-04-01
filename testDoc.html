@@ -1,32 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Box Shadow Example</title>
-    <style>
-        #boxWithShadow {
-            width: 100px;
-            height: 100px;
-            background-color: #f0f0f0;
-            /* Initial styling without box shadow */
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Print Form Data</title>
+<style>
+  /* Hide the print button when printing */
+  @media print {
+    .print-button {
+      display: none;
+    }
+  }
+</style>
 </head>
 <body>
 
-<div id="boxWithShadow"></div>
-<button onclick="applyBoxShadow()">Apply Box Shadow</button>
+<h2>Print Form Data</h2>
+
+<form id="myForm">
+  <label for="name">Name:</label><br>
+  <input type="text" id="name" name="name" required><br>
+  <label for="email">Email:</label><br>
+  <input type="email" id="email" name="email" required><br><br>
+  <button type="button" class="print-button" onclick="printFormData()">Print</button>
+  <button type="button" onclick="submitForm()">Submit</button>
+</form>
+
+<!-- Hidden iframe to hold printable content -->
+<iframe id="printFrame" style="display: none;"></iframe>
 
 <script>
-    function applyBoxShadow() {
-        // Get the element by its id
-        var boxElement = document.getElementById('boxWithShadow');
+  // JavaScript to trigger printing
+  function printFormData() {
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    
+    // Create a printable HTML content
+    var printableContent = `
+      <h2>Form Data</h2>
+      <p><strong>Name:</strong> ${name}</p>
+      <p><strong>Email:</strong> ${email}</p>
+    `;
 
-        // Apply the box shadow styling
-        boxElement.style.boxShadow = '-17.5px -0.5px 32px -6.5px #1c1c1c';
-    }
+    // Get the iframe
+    var printFrame = document.getElementById("printFrame");
+    var printDoc = printFrame.contentWindow || printFrame.contentDocument;
+
+    // Write the printable content to the iframe
+    printDoc.document.open();
+    printDoc.document.write(printableContent);
+    printDoc.document.close();
+
+    // Open print dialog for the iframe
+    printDoc.focus();
+    printDoc.print();
+  }
+
+  // JavaScript to submit the form
+  function submitForm() {
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    // You can handle form submission here using AJAX or any other method
+    // For demonstration, let's just log the form data to console
+    console.log("Name: " + name);
+    console.log("Email: " + email);
+  }
 </script>
 
 </body>
 </html>
+     
