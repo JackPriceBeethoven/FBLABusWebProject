@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', function () {
       
         var isConfirmed = confirm("Are you sure you want to submit your application?");
         if (isConfirmed) {
-          // Send data to PHP script using AJAX
+                  sendEmail();
           var xhr = new XMLHttpRequest();
           xhr.open("POST", "process_application.php", true);
           xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
