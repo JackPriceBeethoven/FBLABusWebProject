@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function () {
   submitButton.addEventListener('click', submitApplication);
 
   // Initialize EmailJS with your user ID
-  emailjs.init('r3shi_TRFvSkQlD2S');
+  emailjs.init('XXSqVVJP0EodKYiED');
 
   // Function to send email
   function sendEmail() {
@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function () {
       };
 
       // Send the email
-      emailjs.send('service_yo892lb', 'template_xa438gi', emailParams)
+      emailjs.send('service_se94awa', 'template_j3mfi2p', emailParams)
           .then(function(response) {
               console.log('Email sent successfully', response);
               // Optionally, display a success message to the user
