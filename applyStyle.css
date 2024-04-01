@@ -32,10 +32,21 @@ html {
     padding-top: 60px;
   }
   
+  .sidenav p {
+    position: absolute;
+    z-index: 1;
+    bottom: 10%;
+    left: 16px;
+    transition: 0.5s;
+    padding-top: 60px;
+    color: #ececec;
+  }
+  
   .sidenav a {
     padding: 40px 8px 8px 40px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 100%;
+    width: 40%;
     color: #c7c7c7;
     display: block;
     transition: 0.3s;
@@ -88,7 +99,11 @@ html {
   }
   
   .open-btn {
-    color: #ececec;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: #c7c7c7;
     border-style: hidden;
     border-radius: 18px;
     opacity: 0.8;
@@ -100,6 +115,9 @@ html {
     cursor: pointer;
     transition: 0.3s;
     z-index: 1;
+    width: auto;
+    height: auto;
+    background-color: #111111d2;
   }
   
   #upArrow {
@@ -208,6 +226,10 @@ html {
     margin: 20px;
   
   }
+  .jobTitle{
+    font-size: 50px;
+    margin-bottom: -10px;
+  }
   .sidenav p {
     position: absolute;
     z-index: 1;
@@ -239,11 +261,12 @@ html {
     box-sizing: border-box;
     color: #c7c7c7;
     border-radius: 18px;
-    width: 15%;
-    height: 500px;
+    width: 50%;
+    height: auto;
     text-align: center;
     margin: 10px;
     padding: 10px;
+    padding-bottom: 30px;
     background-color: #111111d2;
   }
   @media screen and (max-width: 2000px) {
